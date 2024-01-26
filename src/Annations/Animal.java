@@ -17,7 +17,7 @@ public class Animal {
         this.age = age;
     }
 
-    public void saveInFile(File file) throws Exception{
+    public void saveInFile(File file){
 
         try(BufferedWriter writer = new BufferedWriter(new FileWriter(file));) {
             for (Field field : getClass().getDeclaredFields()) {
@@ -26,6 +26,7 @@ public class Animal {
                 }
             }
         } catch (IOException e) {
+            System.out.println(e.getMessage());
         }
 
     }

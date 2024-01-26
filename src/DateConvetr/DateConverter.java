@@ -20,7 +20,4 @@ public class DateConverter {
         return instant.atZone(ZoneId.systemDefault()).toLocalDateTime();
     }
 
-    private Instant toInstant() {
-        return null;
-    }
 }
